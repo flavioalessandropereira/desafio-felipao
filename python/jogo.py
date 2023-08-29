@@ -1,28 +1,32 @@
-jogador = input('Nome do personagem: ')
-xp = int(input('XP atual: '))
+numero_herois = int(input('Quantos heróis deseja classificar: '))
 
-if (xp < 1000):
-  nivel = "Ferro"
+for i in range(1, numero_herois + 1):
 
-elif 1001 <= xp <= 2000:
-  nivel = "Bronze"
+  jogador = input(f'Nome do personagem {i}: ')
+  xp = int(input(f'XP atual {i}: '))
 
-elif 2001 <= xp <=  5000:
-  nivel = "Prata"
+  if (xp < 1000):
+      nivel = "Ferro"
 
-elif  6001 <= xp <= 7000:
-  nivel = "Ouro"
+  elif 1001 <= xp <= 2000:
+      nivel = "Bronze"
 
-elif 7001 <= xp <= 8000:
-  nivel = "Platina"
-  
-elif 8001 <= xp <= 9000:
-  nivel =  "Ascendente"
+  elif 2001 <= xp <= 5000:
+      nivel = "Prata"
 
-elif 9001 <= xp <= 10000:
-  nivel = "Imortal"
+  elif 6001 <= xp <= 7000:
+      nivel = "Ouro"
 
-else:
-  nivel = "Radiante"
+  elif 7001 <= xp <= 8000:
+      nivel = "Platina"
 
-print(f"O Herói de nome {jogador} está no nível de {nivel}")
+  elif 8001 <= xp <= 9000:
+      nivel = "Ascendente"
+
+  elif 9001 <= xp <= 10000:
+      nivel = "Imortal"
+
+  else:
+      nivel = "Radiante"
+
+  print(f"O Herói de nome {jogador} está no nível de {nivel}")
